@@ -13,7 +13,7 @@ Further runs will be immediate, as the image will be cached locally.
 The recommended way to run this container looks like this:
 
 ```bash
-$ docker run -d -p 80:80 clue/json-server
+$ docker run -d -p 80:80 netmee/openshift-json-server
 ```
 
 The above example exposes the JSON Server REST API on port 80, so that you can now browse to:
@@ -33,10 +33,10 @@ This is a rather common setup following docker's conventions:
 You can supply any number of JSON Server arguments that will be passed through unmodified.
 
 ```bash
-$ docker run -it --rm clue/json-server --help
+$ docker run -it --rm netmee/openshift-json-server --help
 ```
 
 ### JSON source
 
-The mount file come from 'http://jsonplaceholder.typicode.com/'
+The mount file come from http://jsonplaceholder.typicode.com/
 it will automatically be used as the plain JSON data source file.
