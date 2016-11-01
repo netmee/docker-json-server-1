@@ -3,7 +3,6 @@ MAINTAINER Christian Lück <christian@lueck.tv>
 
 ENV HOME /data
 WORKDIR /data
-VOLUME /data
 
 EXPOSE 80
 ADD run.sh /run.sh
