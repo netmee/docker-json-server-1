@@ -1,4 +1,4 @@
-# docker-json-server
+# docker-openshift-json-server
 
 [JSON Server](https://github.com/typicode/json-server) provides REST API mocking based on plain JSON.
 This is a [docker](https://www.docker.io) image that eases setup.
