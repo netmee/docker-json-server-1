@@ -1,12 +1,22 @@
 FROM node:latest
 MAINTAINER Christian Lück <christian@lueck.tv>
 
-RUN npm install -g json-server
-
+ENV HOME /data
 WORKDIR /data
 VOLUME /data
 
 EXPOSE 80
 ADD run.sh /run.sh
+
+RUN set -ex;                                \
+    chmod +x /run.sh;                       \
+    chmod a+w /data;                        \   
+    npm install -g json-server;
+RUN set -xe;                                \
+    groupadd -g 1001 jsonserver;            \
+    useradd -u 1001 -g 1001 -m jsonserver;  \
+    chown -R jsonserver:jsonserver /data
+
+USER 1001
 ENTRYPOINT ["bash", "/run.sh"]
 CMD []
