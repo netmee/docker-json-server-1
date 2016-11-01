@@ -4,7 +4,7 @@ MAINTAINER Christian Lück <christian@lueck.tv>
 ENV HOME /data
 WORKDIR /data
 
-EXPOSE 80
+EXPOSE 3000
 ADD run.sh /run.sh
 
 RUN set -ex;                                \
