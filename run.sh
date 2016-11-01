@@ -1,5 +1,7 @@
 #!/bin/bash
 
+wget ‐‐directory-prefix=/data/ ‐‐output-document=db.json http://jsonplaceholder.typicode.com/db
+
 args="$@"
 
 args="$@ -p 80"
