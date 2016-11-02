@@ -2,8 +2,6 @@
 
 args="$@"
 
-args="$@ -p 80"
-
 file=/data/db.json
 if [ -f $file ]; then
     echo "Found db.json, trying to open"
