@@ -1,7 +1,5 @@
 #!/bin/bash
 
-wget ‐O /data/db.json http://jsonplaceholder.typicode.com/db
-
 args="$@"
 
 args="$@ -p 80"
