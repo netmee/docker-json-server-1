@@ -1,11 +1,11 @@
 FROM node:latest
-MAINTAINER Christian Lück <christian@lueck.tv>
 
 ENV HOME /data
 WORKDIR /data
 
 EXPOSE 3000
-ADD run.sh /run.sh
+ADD https://raw.githubusercontent.com/netmee/docker-openshift-json-server/master/run.sh /run.sh
+ADD http://jsonplaceholder.typicode.com/db /data/db.json
 
 RUN set -ex;                                \
     chmod +x /run.sh;                       \
